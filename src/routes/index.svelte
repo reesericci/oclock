@@ -1,14 +1,16 @@
 <script lang="ts">
   import 'temporal-polyfill/global'
+  
+  let showTime = false;
 
   let time = Temporal.Now.plainTimeISO()
 
   $: timeString = time.toLocaleString()
 
   setInterval(() => {
+    showTime = true;
     time = Temporal.Now.plainTimeISO()
   }, 100)
-
 </script>
 
 <svelte:head>
@@ -17,7 +19,9 @@
 
 <div>
   <h2>oclock</h2>
+  {if showTime}
   <h1>{timeString}</h1>
+  {/if}
 </div>
 
 <style>
