@@ -19,7 +19,7 @@
 
 <div>
   <h2>oclock</h2>
-  {if showTime}
+  {#if showTime}
   <h1>{timeString}</h1>
   {/if}
 </div>
