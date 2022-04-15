@@ -31,6 +31,7 @@ h2 {
   padding-top: 2rem;
 }
 h1 {
+  margin-top: 2rem;
   font-size: 15rem;
   word-wrap: break-word;
 }
